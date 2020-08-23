@@ -37,9 +37,7 @@ class MyTestCase(unittest.TestCase):
         input = ['H', 'H', 'H', 'H', 'H', 'H', 'T', 'T', 'T', 'T', 'T', 'T']
         self.assertEqual(coin_flip_streaks.count_streaks(input), 2)
 
-    def test_count_streaks_returns_two(self):
-        input = ['H', 'H', 'H', 'H', 'H', 'H', 'T', 'T', 'T', 'T', 'T', 'T']
-        self.assertEqual(coin_flip_streaks.count_streaks(input), 2)
+
 
     def test_count_streaks_long_streak_counts_once(self):
         input = ['H', 'H', 'H', 'H', 'H', 'H', 'H', 'H', 'H',
