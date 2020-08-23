@@ -26,24 +26,22 @@ class MyTestCase(unittest.TestCase):
     #     self.assertNotEqual(heads - tails, 0, msg="Too perfect, {heads/tails}")
 
     def test_count_streaks_returns_zero(self):
-        input = ['H', 'T', 'H', 'T', 'H', 'T', 'H', 'T', 'H', 'T', 'H', 'T', 'H', 'T', 'H', 'T']
-        self.assertEqual(coin_flip_streaks.count_streaks(input), 0)
+        inp = ['H', 'T', 'H', 'T', 'H', 'T', 'H', 'T', 'H', 'T', 'H', 'T', 'H', 'T', 'H', 'T']
+        self.assertEqual(coin_flip_streaks.count_streaks(inp), 0)
 
     def test_count_streaks_returns_one(self):
-        input = ['H', 'H', 'H', 'H', 'H', 'H', 'T']
-        self.assertEqual(coin_flip_streaks.count_streaks(input), 1)
+        inp = ['H', 'H', 'H', 'H', 'H', 'H', 'T']
+        self.assertEqual(coin_flip_streaks.count_streaks(inp), 1)
 
     def test_count_streaks_returns_two(self):
-        input = ['H', 'H', 'H', 'H', 'H', 'H', 'T', 'T', 'T', 'T', 'T', 'T']
-        self.assertEqual(coin_flip_streaks.count_streaks(input), 2)
-
-
+        inp = ['H', 'H', 'H', 'H', 'H', 'H', 'T', 'T', 'T', 'T', 'T', 'T']
+        self.assertEqual(coin_flip_streaks.count_streaks(inp), 2)
 
     def test_count_streaks_long_streak_counts_once(self):
-        input = ['H', 'H', 'H', 'H', 'H', 'H', 'H', 'H', 'H',
-                 'H', 'H', 'H', 'H', 'H', 'H', 'H', 'H', 'H',
-                 'H', 'H', 'H', 'H', 'H', 'H', 'H', 'H', 'H']
-        self.assertEqual(coin_flip_streaks.count_streaks(input), 1)
+        inp = ['H', 'H', 'H', 'H', 'H', 'H', 'H', 'H', 'H',
+               'H', 'H', 'H', 'H', 'H', 'H', 'H', 'H', 'H',
+               'H', 'H', 'H', 'H', 'H', 'H', 'H', 'H', 'H']
+        self.assertEqual(coin_flip_streaks.count_streaks(inp), 1)
 
 
 if __name__ == '__main__':
